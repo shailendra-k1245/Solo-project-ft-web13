@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+       a{
+            color: white;
+            text-decoration: none;
+        }
+
+        img{
+            width: 300px;
+            height: 300px;
+        }
+
+        #container{
+            width: 98%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+           grid-gap: 3%;
+           margin: auto;
+           
+           
+
+        }
+
+        #container > div{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            padding: 10px;
+        }
+
+        button{
+            width: 100%;
+            height: 60px;
+            font-size: 25px;
+            background-color:gray;
+            color: white;
+        }
+
+        #top{
+    border: 1px solid transparent;
+    width:100%;
+    height: 35px;
+    display: flex;
+    
+}
+
+
+
+#category{
+    border:1px solid transparent;
+    height: 100%;
+    width:15%;
+    margin-left: 10%;
+}
+
+#sign{
+    border:1px solid transparent;
+    height:100%;
+    width: 40%;
+    margin-left: 28%;
+
+}
+
+#category{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+#sign{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    color:#878589;
+}
+.fa-heart{
+    color:#b4bac7;
+    /* border:1px dotted black; */
+}
+
+#theresa{
+    border:1px solid transparent;
+    width:60%;
+    margin-left:38%;
+    height:70px;
+    margin-top: 1%;
+    padding-top: 2%;
+    text-align: right;
+}
+
+/* #theresa{
+    display: grid;
+    grid-template-columns: auto auto;
+
+} */
+#th{
+    width:50% !important;
+}
+
+#shipping{
+    color:#ce6b7f;
+    text-align: center;
+}
+
+/* footer part */
+.link > a{
+    text-decoration: underline ;
+    color: black;
+    
+  }
+  .link{
+    display: inline-block;
+    margin-left: 38%;
+    border:1px solid transparent;
+  }
+  .shop{
+    width:27%;
+    border: 1px solid transparent;
+    margin: auto;
+    text-align: center;
+  }
+
+  .tableContainer{
+    border:1px solid transparent;
+    width:90%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 5%;
+    margin: auto ;
+  }
+  .tableContainer > div{
+    border:1px solid transparent;
+  }
+.gray{
+  color:gray;
+}
+
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="category">
+            <a href="prod.html">Women</a>
+            <a>Men</a>
+            <a>Kids</a>
+        </div>
+
+        <div id="sign">
+            <div>Signup for Newsletter</div>
+            <div id="account" onclick="window.location.href='/sign up/sign in sign up.html'">My Account</div>
+            <div>My Wishlist <i class="fa fa-heart"></i></div>
+            <div>India|English</div>
+        </div>
+
+
+    </div>
+
+    <div id="theresa">
+       
+        <div id="bag"><a href="Cart.html" style="color:black">Shopping bag</a> <i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+    </div>
+
+    <hr>
+
+    <div id="shipping">
+        Free returns within 30 days
+    </div>
+   
+    
+</body>
+</html>
+
+<script>
+    var product = JSON.parse(localStorage.getItem('shoppingBag'));
+
+    
+    var mainDiv = document.createElement("div");
+    mainDiv.setAttribute("id", "container");
+  
+    //console.log(product)
+
+    displayItems(product);
+   
+    var Cart = JSON.parse(localStorage.getItem("cartItems")) || []; //create an array to store selected items for cart;
+
+function displayItems(product)
+{
+   product.map(function(item)
+   {
+
+       
+       var imgDiv =  document.createElement("div");
+        var img = document.createElement("img");
+          img.setAttribute("src",item.imgUrl);
+       
+       var h2 = document.createElement("h2");
+        h2.textContent = item.name;
+        
+        var h3 = document.createElement("h3");
+
+        h3.textContent = item.price;
+
+        var h4 = document.createElement("h4");
+
+        h4.textContent = item.type;
+
+        var btn = document.createElement("button");
+
+        btn.textContent = "Add to Cart";
+
+        btn.addEventListener("click", function(){
+
+            addToCart(item)
+
+        });
+
+
+
+        imgDiv.append(img, h2, h3, h4, btn);
+        mainDiv.append(imgDiv);
+
+        document.querySelector("body").append(mainDiv);
+
+    });
+
+    
+  
+    function addToCart(item)
+    {
+       Cart.push(item);
+       localStorage.setItem("cartItems", JSON.stringify(Cart));
+       //console.log(cart)
+    }
+    }
+
+</script>
