@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    ul{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        #nav{
+
+            background-color:rgb(12, 14, 182);
+            font-weight: bold;
+            color: white;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+        }
+
+        #box{
+            width: 99%;
+            display: flex;
+            flex-direction: row-reverse;
+            
+        }
+
+        #right{
+            width: 20%;
+            height: auto;
+          
+            padding: 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        #container{
+            width: 78%;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+           grid-gap: 2%;
+            
+            margin-left: 0;
+           
+
+        }
+
+        #container > div{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            padding: 5px;
+        }
+
+        button{
+            width: 60px;
+            height: 30px;
+            font-size: 12px;
+            background-color:rgb(16, 16, 87);
+            color: white;
+        }
+
+        #right > input{
+            width: 200px;
+            height: 25px;
+        }
+        
+        a > button{
+            width: 120px;
+            height: 35px;
+            font-size: 16px;
+            background-color:rgb(16, 16, 87);
+            color: white; 
+            margin-left: 30%;
+            padding: 8px;
+        }
+        
+</style>
+<body>
+    <div id="nav">
+        
+        <ul>
+           
+            <a href="prod.html"><li>Product</li></a>
+            <a href="signIn.html"> <li>Log In</li></a>
+            <a href="signUp.html"> <li>Sign Up</li></a>
+            <a href="Cart.html"><li>cart</li></a>
+            <a href="payment.html"> <li>Account</li></a>
+        </ul>
+
+    </div>
+    <div><h1>Welcome To Cart</h1></div>
+   <div id="box">
+        <div id="container"></div>
+        
+        <div id="right">
+            <h3>Total Items = <span id="totalItems"></span></h3>
+            <h3>Total Price =  <span id="totalPrice"></span></h3>
+            <hr>
+            <h4>Enter Coupon</h4>
+            <input type="text" id="coupon"> 
+            <button id="apply">Apply</button>
+            <p id="msg"></p>
+        <a href="payment.html"><button>CHECKOUT</button></a> 
+        
+            
+        </div>
+
+   </div> 
+</body>
+</html>
+
+<script>
+      var mainDiv = document.getElementById("container");
+   // mainDiv.setAttribute("id", "container");
+    var cartItems = JSON.parse(localStorage.getItem("cartItems"));
+
+    displayItems(cartItems);
+    function displayItems(product)
+{
+   product.map(function(item)
+   {
+
+       
+       var imgDiv =  document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src",item.imgUrl);
+       
+       var h2 = document.createElement("h2");
+        h2.textContent = item.name;
+        
+        var h3 = document.createElement("h3");
+
+        h3.textContent = item.price;
+
+        var h4 = document.createElement("h4");
+
+        h4.textContent = item.type;
+
+
+        imgDiv.append(img, h2, h3, h4);
+        mainDiv.append(imgDiv);
+
+        document.querySelector("#box").append(mainDiv);
+
+    });
+
+    var totalP = cartItems.reduce(function(sum, currentPrice){
+       
+        return sum += Number(currentPrice.price);
+    }, 0);
+    document.querySelector("#totalPrice").textContent = totalP
+    document.querySelector("#totalItems").textContent = cartItems.length;
+
+
+    //coupon part
+   
+   
+    document.querySelector("#apply").addEventListener("click", addCoupon)
+   
+      addCoupon()
+    
+      function addCoupon()
+    {  var total = document.querySelector("#totalPrice").textContent;
+     
+        var coupon = document.getElementById("coupon").value;
+        
+        if(coupon === "masai30")
+        {
+            
+             var Total = Number(total) *0.3;
+            document.querySelector("#totalPrice").textContent = Total;
+            document.getElementById("msg").textContent = "Coupon added succesfully";
+
+
+        }
+        else
+            document.getElementById("msg").textContent = "";
+    }
+   
+    
+}
+</script>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          ul{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            color: white;
+        }
+
+        #nav{
+
+            background-color:rgb(12, 14, 182);
+            font-weight: bold;
+            color: white;
+
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+         *{
+            text-align: center;
+            justify-content: center;
+           
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        .head{
+            width: 100%;
+            height: 56px;
+          
+            margin: auto;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 15px 0;
+        }
+        #email, #pass, #name, #mobile{
+            width: 300px;
+            padding: 16px;
+            border-radius: 5px;
+            margin: 10px;
+            border:1px solid rgb(164,167,170)
+        }
+
+        #signup, #signin{
+            margin: 10px;
+            border-radius: 20px;
+            width: 340px;
+            padding: 16px 60px;
+            font-size: 18px;
+            
+        }
+        #signup{
+            color: white;
+            font-size: 16px;
+            background-color: rgb(1,100,255);
+            text-align: center;
+            border: 1px solid rgb(164,167,170);
+        }
+        #signup:hover{
+            background-color: #1b53ac;
+        }
+       #change_text{
+           text-decoration: none;
+           color: black;
+       }
+       #change_text:hover{
+          color: rgb(75, 73, 73);  
+       }
+    
+    </style>
+</head>
+<body>
+    <div id="nav">
+        
+        <ul>
+          
+            <a href="prod.html" style="color: white;"><li>Product</li></a>
+            <a href="signIn.html"> <li>Log In</li></a>
+            <a href="signUp.html"> <li>Sign Up</li></a>
+            <a href="Cart.html"><li>cart</li></a>
+            <a href="payment.html"> <li>Account</li></a>
+        </ul>
+
+    </div>
+    <h1>Sign Up</h1>
+    <div>
+    <input type="text" id="name" placeholder="enter name">
+</div>
+    <div>
+    <input type="email" id="email" placeholder="Enter your mail id">
+</div>
+    <div>
+    <input type="password" id="pass" placeholder="Enter a strong password">
+    </div>
+     <div>
+    <input type="number" id="mobile" placeholder="Enter valid mobile No">
+</div>
+    <button id="signup">Sign Up</button>
+
+    <div>
+        <a href="signIn.html"><button id="signin">Sign In</button></a>
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", signUp);
+    
+    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+    function signUp()
+    {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("pass").value;
+        var mobile = document.getElementById("mobile").value;
+
+
+        var users = {
+            Name : name,
+            Email: email,
+            Password: password,
+            mobileNo: mobile,
+        };
+         
+        userArr.push(users);
+        localStorage.setItem("userData", JSON.stringify(userArr));
+        
+        if(users.Name && users.Email && users.Password && users.mobileNo)
+        window.alert("Sign Up Succesful");
+
+     }
+
+    
+</script>

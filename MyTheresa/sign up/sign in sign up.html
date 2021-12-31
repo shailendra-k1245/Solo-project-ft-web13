@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in Sign up</title>
+    <link rel="stylesheet" href="signin signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="top">
+        <div id="category">
+            <a href="../prod.html">Women</a>
+            <a>Men</a>
+            <a>Kids</a>
+        </div>
+
+        <div id="sign">
+            <div>Signup for Newsletter</div>
+            <div id="account">My Account</div>
+            <div>My Wishlist <i class="fa fa-heart"></i></div>
+            <div>India|English</div>
+        </div>
+
+
+    </div>
+
+    <div id="theresa">
+        <img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20211105T160037" id="th" onclick="window.location.href='../home2.html'">
+        <div id="bag">Shopping bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+    </div>
+
+    
+
+   
+
+    <div id="products">
+        <div class='gray'>NEW ARRIVALS</div>
+        <div class='gray'>DESIGNERS</div>
+        <div class='gray'>CLOTHING</div>
+        <div class='gray'>SHOES</div>
+        <div class='gray'>BAGS</div>
+        <div class='gray'>ACCESSORIES</div>
+        <div class='gray'>VACATION SHOP</div>
+        <div class='gray'>FESTIVE SEASON</div>
+        <div class='gray'>SALE</div>
+        <div class='gray'><input type="text" placeholder="search for...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+   
+    </div>
+    <hr>
+    <div id="shipping">
+        Free returns within 30 days
+    </div>
+
+   <div id="accountDetails">
+
+            <div id="createAccount">
+                <form action="" id="signupForm" >
+                <h4>CREATE AN ACCOUNT</h4>
+                <p>Please enter the following information to create your account</p>
+               
+                    <input type="radio" value="female" id="Ms" name='gender' >
+                    <label for="Ms">Ms.</label>
+                    <input type="radio" value="male" id="Mr" name='gender'>
+                    <label for="Mr"> Mr.</label>
+                    <div id="inputFields">
+                    <select name="education" id="academic">
+                        <option value="null" disabled selected hidden>academic title</option>
+                        <option value="doctor">Dr.</option>
+                        <option value="professor">Prof</option>
+                    </select>
+                    <input type="text" placeholder="first name*" id="fname">
+                    <input type="text"placeholder="last name*" id="lname">
+                    <input type="email"placeholder='email address' id="email">
+                    <input type="password" placeholder='password' id="password">
+                    <input type="password" placeholder='confirm password' id="password2">
+                
+                </div>
+                <p>I agree that Mytheresa may insert analytical web beacons into the
+                     newsletter and create a personalized user profile based on my purchase
+                      and usage behavior, including sending a notification when I have 
+                      placed something in the shopping cart. Further details can be found
+                       in our Privacy Policy, clause 5. I understand that I can revoke
+                        my consent at any time by emailing privacy@mytheresa.com.</p>
+                        <input type="submit"placeholder="register" value='Submit' onclick='signup(event)'>
+                </form>
+            </div>
+            <div id="verticalLine">
+
+            </div>
+            <div id="registered">
+                <h4>ALREADY REGISTERED</h4>
+                <p>If you have an account with us, please login</p>
+               <form action="" id='signInForm'>
+                <input type="email" id="loginMail" name='email' placeholder="email address*">
+                <input type="password" id="loginPassword" name='password' placeholder="password*">
+                <input type="submit" placeholder="login" value="Login" onclick="signin(event)">
+               </form>
+                <p>At Mytheresa, we keep your information secure. As a result, it will be
+                     necessary for you to log in to your account before you are able to
+                      place an order or change the information on your account. You will
+                       be asked to log in to complete your order even if you have already
+                        been greeted on the website.</p>
+            </div>
+
+
+    </div>
+
+    <hr>
+
+
+    <div class='tableContainer'>
+        <div class="c1">
+          <p><h5>SERVICE AND SECURITY</h5></p><br>
+          <p><h5>Fast delivery</h5>
+          <div class="gray">Delivery within 2 bussines days</div></p>
+          <p><h5>Free returns within 30 days</h5>
+          <div class="gray">Convenient return service</div></p>
+          <p><h5>Secure payment and daya protection</h5>
+          <div class="gray">SSL encryption for secure transactions and personal data</div></p>
+        </div>
+        <div class="c2"><p>MY THERESA</p><br>
+        <p class="gray"> About us</p>
+        <p class="gray"> Trust and Services</p>
+        <p class="gray"> Press</p>
+        <p class="gray"> Careers</p>
+        <p class="gray"> Investor Relations</p>
+        <p class="gray"> Affiliates</p>
+        <p></p></div>
+        <div class="c3"><p>CUSTOMER SERVICE</p><br>
+        <p class="gray">Contact us</p>
+        <p class="gray">Shipping information</p>
+        <p class="gray">Secure payment</p>
+        <p class="gray">Exchanges</p>
+        <p class="gray">Returns</p>
+        <p class="gray">After Sale Service</p>
+        <p class="gray">Gift card</p>
+        </div>
+        <div class="c4"><p>GET TREND UPDATES,STYLES,TIPS AND MORE</p><br>
+        <p><input type="email" placeholder="your email address here"> <button type="submit">SIGN UP</button></p>
+        <p>Wishlist <i class="fa fa-heart"></i></p>
+        <p class="gray">Receive personal notifications</p>
+        <p>Follow us on</p>
+        <p><i class="fa fa-linkedin-square"style="font-size:24px;"></i>
+          <i style="font-size:24px" class="fa">&#xf09a;</i>
+          <i style="font-size:24px" class="fa">&#xf099;</i>
+          <i style="font-size:24px" class="fa">&#xf0d2;</i>
+          <i style="font-size:24px" class="fa">&#xf16d;</i>
+          <i style="font-size:24px" class="fa">&#xf16a;</i>
+          <i style="font-size:24px" class="fa">&#xf1d7;</i>
+          <i style="font-size:24px" class="fa">&#xf18a;</i></p></div>
+      </div>
+      <hr>
+      <div class="payment">
+        <span class="gray">payment methods</span>
+        <img src="../paypal icon.PNG" alt="">
+        <img src="../american express.PNG" alt="">
+        <img src="../visa.PNG" alt="">
+        <img src="../mastercard.PNG" alt="">
+        <img src="../d.PNG" alt="">
+        <img src="../jcb.PNG" alt="">
+        <img src="../uno.PNG" alt="">
+        <img src="../discover.PNG" alt="">
+        <span style='float: right;'>delivered by <img src="../dhl.PNG" alt=""></span>
+      </div>
+      <hr>
+      <div class="copyright">
+        <span>copyright © 2006-2021 mytheresa.com</span>
+        <span style="float:right;">
+        <span class="gray">terms of use &nbsp;</span>
+        <span class="gray">privacy policy &nbsp;</span>
+        <span class="gray">imprint &nbsp;</span>
+      </span>
+      </div>
+
+
+</body>
+</html>
+
+<script>
+    function signup(e){
+        e.preventDefault();
+        let signupData = document.getElementById('signupForm');
+        let firstName = signupData.fname.value;
+        let lastName = signupData.lname.value
+        let email = signupData.email.value;
+        let password = signupData.password.value;
+        let password2 = signupData.password2.value;
+
+        // console.log(password2);
+
+                
+        
+        if(password != password2){
+            alert("Password is not same");
+            return false;
+            }
+
+            
+    if(localStorage.getItem("users") === null){
+        localStorage.setItem("users", JSON.stringify([]));
+    };
+
+    let user = {
+        firstName,
+        lastName,
+        email,
+        password
+    }
+
+    let arr = JSON.parse(localStorage.getItem("users"));
+
+    arr.push(user);
+
+    localStorage.setItem("users", JSON.stringify(arr));
+
+}
+
+        function signin(e){
+            e.preventDefault();
+            let userData = document.getElementById("signInForm");
+            let loginEmail = userData.loginMail.value;
+            let login_Password = userData.loginPassword.value;
+            console.log(loginEmail, login_Password);
+            let all_users = JSON.parse(localStorage.getItem("users"));
+
+
+            all_users.forEach(function (user){
+        if (loginEmail === user.email && login_Password === user.password){
+           // alert("Logged in successfully");
+            window.location.assign("../home2.html");
+        }
+    })
+        }
+
+        
+</script>

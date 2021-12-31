@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="prod.css">
+</head>
+<body>
+    <div id="top">
+        <div id="category">
+            <a href="prod.html">Women</a>
+            <a>Men</a>
+            <a>Kids</a>
+        </div>
+
+        <div id="sign">
+            <div>Signup for Newsletter</div>
+            <div id="account">My Account</div>
+            <div>My Wishlist <i class="fa fa-heart"></i></div>
+            <div>India|English</div>
+        </div>
+
+
+    </div>
+
+    <div id="theresa">
+        <img src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20211105T160037" id="th">
+        <div id="bag">Shopping bag <i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+    </div>
+
+    
+
+   
+
+    <div id="products">
+        <div class='gray'>NEW ARRIVALS</div>
+        <div class='gray'>DESIGNERS</div>
+        <div class='gray'>CLOTHING</div>
+        <div class='gray'>SHOES</div>
+        <div class='gray'>BAGS</div>
+        <div class='gray'>ACCESSORIES</div>
+        <div class='gray'>VACATION SHOP</div>
+        <div class='gray'>FESTIVE SEASON</div>
+        <div class='gray'>SALE</div>
+        <div class='gray'><input type="text" placeholder="search for...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+   
+    </div>
+    <hr>
+    <div id="shipping">
+        Free returns within 30 days
+    </div>
+    <hr>
+
+    <h4 class='gray' >EXCLUSIVES</h4>
+
+    <div id="items">
+        <div class="item" id="item1">
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a3/P00598726.jpg" onclick="addToCart(item1)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">MONIQUE LUHLIER</h4></p>
+                <p class="gray">Embellished strapless tulle gown</p>
+                <p>£ 4,199</p>
+            </div>
+        </div>
+        <div class="item" id="item2">
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00588100.jpg" alt="" onclick="addToCart(item2)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">SPINELLI KILCOLLIN</h4></p>
+                <p class="gray">Exclusive to Mytheresa – 18kt yellow gold ring with sapphire</p>
+                <p>£ 1,945</p>
+            </div>
+        </div>
+        <div class="item" id="item3">
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/89/P00589788.jpg" alt="" onclick="addToCart(item3)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">SAINT LAURENT</h4></p>
+                <p class="gray">Cassandra Small canvas shoulder bag</p>
+                <p>£ 1,085</p>
+            </div>
+        </div>
+       
+        <div class="item" id='item4'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/69/P00571457.jpg" alt="" onclick="addToCart(item4)">
+            </div>
+            <div class="nameNprice">
+               <p><h4 id="name">SAINT LAURENT</h4> </p>
+               <p class="gray">Sheer silk crêpe blouse</p>
+               <p>£ 835</p>
+            </div>
+        </div>
+        <div class="item" id='item5'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cd/P00583104.jpg" alt="" onclick="addToCart(item5)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">JENNIFER BEHR</h4> </p>
+               <p class="gray">Cosette embellished bow barrette</p>
+               <p>£ 235</p>
+            </div>
+        </div>
+        <div class="item" id='item6'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0a/P00588199.jpg" alt="" onclick="addToCart(item6)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">ALEXANDRE VAUTHIER</h4> </p>
+                <p class="gray">105 crystal-embellished sandals</p>
+                <p>£ 635</p>
+            </div>
+        </div>
+        <div class="item" id='item7'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00620799.jpg" alt="" onclick="addToCart(item7)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">MAGDA BUTRYM</h4> </p>
+                <p class="gray">Crystal-embellished velvet miniskirt</p>
+                <p>£ 2,739</p>
+            </div>
+        </div>
+        <div class="item" id='item8'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cd/P00591741.jpg" alt="" onclick="addToCart(item8)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">SAINT LAURENT</h4> </p>
+                <p class="gray">Printed sablé slip dress</p>
+                <p>£ 1,135</p>
+            </div>
+        </div>
+        <div class="item" id='item9'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8f/P00610139.jpg" alt="" onclick="addToCart(item9)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">ALESSANDRA RICH</h4> </p>
+                <p class="gray">Crystal clip-on drop earrings</p>
+                <p>£ 395</p>
+            </div>
+        </div>
+        <div class="item" id='item10'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/23/P00588921.jpg" alt="" onclick="addToCart(item10)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">AQUAZZURA</h4> </p>
+                <p class="gray">Nights 75 embellished PVC pumps</p>
+                <p>£ 755</p>
+            </div>
+        </div>
+        <div class="item" id='item11'>
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/13/P00608825.jpg" alt="" onclick="addToCart(item11)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">SAINT LAURENT</h4> </p>
+                <p class="gray">Faux fur-trimmed silk minidress</p>
+                <p>£ 2,515</p>
+            </div>
+        </div>
+        <div class="item" id="item12">
+            <div class="image">
+                <img src="https://img.mytheresa.com/560/560/33/jpeg/catalog/product/01/P00598747.jpg" alt="" onclick="addToCart(item12)">
+            </div>
+            <div class="nameNprice">
+                <p><h4 id="name">MONIQUE LHUILLIER</h4></p>
+                <p>Embellished tulle midi dress</p>
+                <p>£ 3,359</p>
+            </div>
+        </div>
+    </div>
+   
+    
+    
+
+</body>
+
+    
+</html>
+
+<script>
+
+var data = [
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/a3/P00598726.jpg",
+
+        name: "MONIQUE LUHLIER",
+
+        price: 4199,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/15/P00588100.jpg",
+
+        name: "SPINELLI KILCOLLIN",
+
+        price:1945,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/89/P00589788.jpg",
+
+        name: "SAINT LAURENT",
+
+        price: 1085,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/69/P00571457.jpg",
+
+        name: "AE AIRFLEX+ SLIM JEAN",
+
+        price: 835,
+
+        id: Math.random(),
+    },
+
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cd/P00583104.jpg",
+
+        name: "AE FLEX ORIGINAL BOOTCUT JEAN",
+
+        price: 235,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/0a/P00588199.jpg",
+
+        name: "AE FLEX SLIM STRAIGHT JEAN",
+
+        price: 635,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/ad/P00620799.jpg",
+
+        name: "AE AIRFLEX+ SLIM STRAIGHT JEAN",
+
+        price: 2739,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/cd/P00591741.jpg",
+
+        name: "AE FLEX SKINNY JEAN",
+
+        price: 1135,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/8f/P00610139.jpg",
+
+        name: "AE AIRFLEX+ SLIM STRAIGHT JEAN",
+
+        price: 395,
+
+        id: Math.random(),
+    },
+
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/23/P00588921.jpg",
+
+        name: "AE AIRFLEX+ SLIM JEAN",
+
+        price: 755,
+
+        id: Math.random(),
+    },
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/13/P00608825.jpg",
+
+        name: "AE AIRFLEX+ TEMP TECH ORIGINAL BOOTCUT JEAN",
+
+        price: 2500,
+
+        id: Math.random(),
+    },
+
+    {
+        image:
+            "https://img.mytheresa.com/560/560/33/jpeg/catalog/product/01/P00598747.jpg",
+
+        name: "AE CLASSIC BOOTCUT JEAN",
+
+        price: 3359,
+
+        id: Math.random(),
+    },];
+   
+       function addToCart(item){
+           
+         
+        
+       }
+       
+
+       
+       
+
+       
+</script>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          ul{
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        #nav{
+
+            background-color:rgb(12, 14, 182);
+            font-weight: bold;
+            color: white;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        img{
+            width: 370px;
+            height: 300px;
+        }
+
+        #container{
+            width: 98%;
+            display: grid;
+            grid-template-columns: 26% 26% 26% 26%;
+           grid-gap: 3%;
+           margin: auto;
+           border: 1px solid blue;
+           
+
+        }
+
+        #container > div{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            padding: 10px;
+        }
+
+        button{
+            width: 100%;
+            height: 60px;
+            font-size: 25px;
+            background-color:rgb(16, 16, 87);
+            color: white;
+        }
+        .ab{
+            width: 35%;
+            height: 500px;
+            margin: auto;
+            border: 1px solid blue;
+            background-color: rgb(9, 9, 71);
+        }
+        label{
+            color: white;
+        }
+
+        label, input{
+            width: 200px;
+            font-size: 16px;
+            margin-left: 30%;
+            
+            margin-bottom: 20px;
+        }
+
+        form > :nth-last-child(1){
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            margin-left: 36%;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        
+        <ul>
+            
+            <a href="prod.html"><li>Product</li></a>
+            <a href="signIn.html"> <li>Log In</li></a>
+            <a href="signUp.html"> <li>Sign Up</li></a>
+            <a href="Cart.html"><li>cart</li></a>
+            <a href="payment.html"> <li>Account</li></a>
+        </ul>
+
+    </div>
+    <h1>payment Details</h1>
+    <form class =ab id="form">
+		<label> Card No:</label><br>
+		<input type = "text" id = "cardNo"><br>
+
+		<label for = ""> Card Type:</label><br>
+		<input type = "text" id = "type" ><br>
+		<label for = ""> Expiry Month</label><br>
+		<input type = "text" id = "date" ><br>
+		<label for = ""> Expiry Year</label><br>
+		<input type = "text" id = "year" ><br>
+		<label for = ""> CVV:</label><br>
+		<input type = "text" id = "cvv" ><br>
+		<label for = "">Cardholder Name:</label><br>
+		<input type = "text" id = "name" ><br>
+        <input type="submit" value="Proceed">
+
+	</form>
+    
+</body>
+</html>
+<script>
+    document.querySelector("#form").addEventListener("submit", payment)
+
+    function payment(e)
+    {
+        e.preventDefault();
+
+        var cardtype = form.type.value;
+        var cardDate = form.date.value;
+        var year = form.year.value;
+        var cvv = form.cvv.value;
+        var name = form.name.value;
+       
+        if(cardtype && cardDate && year && cvv && name)
+        {
+            window.location.href = "Otp.html";
+        }
+
+        else
+           var h5 = document.createElement("h5");
+           h5.textContent = "Please enter valid information";
+        //console.log(cardDate, cardtype, year, cvv, name )
+
+    }
+</script>

@@ -1,0 +1,105 @@
+#top{
+    border: 1px solid transparent;
+    width:100%;
+    height: 35px;
+    display: flex;
+    
+}
+#category{
+    border:1px solid transparent;
+    height: 100%;
+    width:15%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+#sign{
+    border:1px solid transparent;
+    height:100%;
+    width: 40%;
+    margin-left: 28%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    color:#878589;
+
+}
+
+#theresa{
+    border:1px solid transparent;
+    width:60%;
+    margin-left:38%;
+    height:70px;
+    margin-top: 1%;
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#th{
+    width:50%;
+}
+
+#shipping{
+    color:#ce6b7f;
+    text-align: center;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: repeat(10,auto  );
+    font-size: 0.9rem;
+    
+}
+.gray{
+    color:darkgrey;
+}
+
+#accountDetails {
+    border:1px solid transparent;
+    width:90%;
+    margin:auto;
+    height:600px;
+}
+
+#createAccount,#registered{
+    width:45%;
+    height:100%;
+    /* border:1px solid teal; */
+}
+
+#createAccount{
+    float:left;
+    border-right: 1px solid black;
+     padding-left: 1%;
+     padding-right: 1%;    
+}
+#registered{
+    float:right;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#inputFields >input,#academic,#registered>input{
+    width:90%;
+    height:32px;
+    margin:1%;
+
+}
+#createAccount > p,#registered>p{
+    line-height: 150%;
+}
+
+.tableContainer{
+    border:1px solid transparent;
+    width:90%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2%;
+    margin: auto ;
+  }
+  .tableContainer > div{
+    border:1px solid transparent;
+  }
