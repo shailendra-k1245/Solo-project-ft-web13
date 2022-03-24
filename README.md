@@ -22,6 +22,14 @@ HTML, CSS, and JavaScript
 9.After registeration user has to login. <br/>
 10.On the same page fill login email and password that were used for registeration. <br/>
 11.User will be redirected to the home page. <br/>
+12.After that click on Women either on navbar or Image. <br/>
+13.User will be landed to the women's fashion page. <br/>
+14.Click on add to cart to buy any product. <br/>
+15.After that click on cart icon or text to show which items are added to your cart. <br/>
+16.Click on Checkout button to go to checkout page. <br/>
+17.Fill the basic payment details and then click on details. <br/>
+18.Then it will show a thank-you message. <br/>
+
 
 <p>See it for yourself: 
   <a href="https://solo-project-ft-web13.vercel.app/home2.html">Deployed-link</a>
