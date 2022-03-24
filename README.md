@@ -11,7 +11,7 @@ HTML, CSS, and JavaScript
 <img src="https://miro.medium.com/max/700/1*tunfm1vr2CAlcc8WHXlhHA.png">
 
 # How to install and use :
-1.Download the zip or clone : git clone https://github.com/shailendra-k1245/Solo-project-ft-web13.git
+1.Download the zip or clone : git clone https://github.com/shailendra-k1245/Solo-project-ft-web13.git <br/>
 2.Extract the zip (no need to extract if cloned from link).
 3.Open home2.html inside Mytheresa folder. 
 4.On the top you'll see the navbar, click on My Account.
